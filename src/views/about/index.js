@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import styled from 'styled-components'
 import { useNavigate } from 'react-router-dom'
 import theme from 'theme'
@@ -30,6 +31,9 @@ const AboutScreen = () => {
 
   return (
     <DefaultLayout>
+      <Helmet>
+        <title>About</title>
+      </Helmet>
       <Text textStyle="h1" color="white">
         Router is working
       </Text>

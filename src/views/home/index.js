@@ -1,10 +1,11 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
+import styled from 'styled-components'
+import { Link } from 'react-router-dom'
+import theme from 'theme'
 import { Text } from 'components'
 import { DefaultLayout } from 'layouts'
-import { Link } from 'react-router-dom'
 import { routesPath } from 'constants.js'
-import styled from 'styled-components'
-import theme from 'theme'
 
 const StyledLink = styled(Link)`
   ${theme.textStyle('title')}
@@ -29,6 +30,9 @@ const StyledLink = styled(Link)`
 const HomeScreen = () => {
   return (
     <DefaultLayout>
+      <Helmet>
+        <title>Home</title>
+      </Helmet>
       <Text textStyle="h1" color="white">
         React is working
       </Text>
