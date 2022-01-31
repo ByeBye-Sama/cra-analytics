@@ -4,7 +4,7 @@ import { HomeScreen, AboutScreen } from 'views'
 import { routesPath } from 'constants.js'
 import { initGA, logPageView } from 'utils/analytics'
 
-const Test = () => {
+const Analytics = () => {
   const location = useLocation()
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const Test = () => {
 const Router = () => {
   return (
     <BrowserRouter>
-      <Test />
+      <Analytics />
       <Routes>
         <Route path={routesPath.HOME} element={<HomeScreen />} />
         <Route path={routesPath.ABOUT} element={<AboutScreen />} />
